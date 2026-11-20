@@ -1,0 +1,2 @@
+import {describe,expect,it} from 'vitest';import {ElementRegistry,resolveElement} from './ElementRegistry';
+describe('ElementRegistry',()=>{it('registers core visualization types',()=>{expect(Object.keys(ElementRegistry)).toEqual(expect.arrayContaining(['timeseries','topology','logs','stat','heatmap','table']))});it('falls back safely for unknown plugins',()=>{expect(resolveElement('future-panel')).toBe(ElementRegistry.table)})});

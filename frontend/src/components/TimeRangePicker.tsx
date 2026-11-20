@@ -1,0 +1,2 @@
+import React from 'react';
+export default function TimeRangePicker({value,onChange}:{value:string;onChange:(v:string)=>void}){return <select className="time-picker" value={value} onChange={e=>onChange(e.target.value)} aria-label="Time range"><option value="15m">Last 15 minutes</option><option value="1h">Last 1 hour</option><option value="6h">Last 6 hours</option><option value="24h">Last 24 hours</option><option value="7d">Last 7 days</option><option value="custom">Custom range…</option></select>}

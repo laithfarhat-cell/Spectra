@@ -1,0 +1,14 @@
+{
+  "id": "system-overview",
+  "title": "System Overview",
+  "schemaVersion": 1,
+  "timeRange": "1h",
+  "refreshSeconds": 5,
+  "variables": [{"name": "environment", "value": "production"}, {"name": "service", "value": "all"}, {"name": "severity", "value": "all"}],
+  "panels": [
+    {"id": "p1", "type": "timeseries", "title": "Request & resource telemetry", "x": 0, "y": 0, "w": 8, "h": 5},
+    {"id": "p2", "type": "stat", "title": "Events ingested", "x": 8, "y": 0, "w": 4, "h": 3, "config": {"mode": "row_count", "label": "Events in view"}},
+    {"id": "p3", "type": "logs", "title": "Live security & application events", "x": 0, "y": 5, "w": 8, "h": 5},
+    {"id": "p4", "type": "topology", "title": "Service topology", "x": 8, "y": 3, "w": 4, "h": 5}
+  ]
+}
