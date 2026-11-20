@@ -1,0 +1,2 @@
+import React,{useState} from 'react';import {Play} from 'lucide-react';
+export default function QueryEditor({onRun}:{onRun:(query:string)=>void}){const [query,setQuery]=useState('SELECT * FROM telemetry LIMIT 100');return <div className="query-editor"><textarea value={query} onChange={e=>setQuery(e.target.value)} spellCheck={false} aria-label="SQL query"/><button className="button-primary" onClick={()=>onRun(query)}><Play size={14}/> Run query</button></div>}
